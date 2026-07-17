@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type="number" name="velocidade" id="KM">
+    <input type="button" value="verificar" onclick="multador()">
+    <div id="resultado">
+
+    </div>
+
+
+    <script>
+        
+        function multador() {
+            let km = document.querySelector('input#KM');
+            km = Number(km.value);
+            let resultado = document.querySelector('div#resultado');
+            if (km > 70) {
+                resultado.innerHTML = "<p> Você está acima de 70KM por hora. MULTADO! </p>";
+            }else{
+                resultado.innerHTML = `<p>Você está dirijando a ${km}KM/h</p>`;
+                resultado.innerHTML += `<p>Dirija com cuidado</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

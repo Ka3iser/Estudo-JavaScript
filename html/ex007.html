@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: wheat;
+            font: normal 16pt Arial;
+        }
+    </style>
+    <title>Evento DOM com usuario</title>
+</head>
+<body>
+    <header>
+        <h1>Evento DOM com usuario</h1>
+    </header>
+    <main>
+        <input type="number" name="txtn1" id="txtn1"> +
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="somar" onclick="somar()">
+        <hr>
+        <input type="number" name="txtn3" id="txtn3"> x
+        <input type="number" name="txtn4" id="txtn4">
+        <input type="button" value="multiplicar" onclick="multiplicar()">
+        <hr>
+        <input type="number" name="txtn5" id="txtn5"> /
+        <input type="number" name="txtn6" id="txtn6">
+        <input type="button" value="dividir" onclick="dividir()">
+    </main>
+    <footer>
+        
+    </footer>
+    <script>
+        function somar(){
+            var n1 = document.querySelector('input#txtn1');
+            var n2 = document.querySelector('input#txtn2');
+            n1 = Number(n1.value);
+            n2 = Number(n2.value);
+            var somar = n1 + n2;
+            alert(`A soma entre ${n1} e ${n2} é igual a ${somar}`);
+        }
+        function multiplicar(){
+            var n1 = document.querySelector('input#txtn3');
+            var n2 = document.querySelector('input#txtn4');
+            n1 = Number(n1.value);
+            n2 = Number(n2.value);
+            var multiplicar = n1 * n2;
+            alert(`${n1} multipicado por ${n2} é igual a ${multiplicar}`);
+        }
+        function dividir(){
+            var n1 = document.querySelector('input#txtn5');
+            var n2 = document.querySelector('input#txtn6');
+            n1 = Number(n1.value);
+            n2 = Number(n2.value);
+            var dividir = n1 / n2;
+            alert(`${n1} dividido por ${n2} é igual a ${dividir.toFixed(2)}`)
+        }
+    </script>
+</body>
+</html>
