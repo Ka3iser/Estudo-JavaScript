@@ -34,9 +34,26 @@ section{
     height: 500px;
     margin: auto;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.507);
+    text-align: start;
+    font-size: 30px;
 }
 footer{
     padding: 10px;
 }
+#res{
+    height: 370px;
+    width: 200px;
+    border: 15px;
+    text-align: start;
+    background-color: aliceblue;
+    border-radius: 20px;
+    border: 1px solid;
+}
 
-
+#tabuada{
+    text-align: center;
+}
+#btnCal{
+    width: 55px;
+    height: 25px;
+}
