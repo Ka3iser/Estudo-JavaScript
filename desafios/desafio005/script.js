@@ -22,6 +22,7 @@ function inLista(n, l) {
 function limite(l) {
     return l.length >= 18
 }
+
 function adicionar() {
     if (limite(valores)) {
         alert('Limite de 18 itens excedito');
@@ -39,17 +40,20 @@ function adicionar() {
     lista.innerHTML += `O valor ${num.value} foi adicionado <br>`;  
     valores.push(Number(num.value));
     res.innerHTML = '';
+
+    num.value = '';
+    num.focus();
 }
 
 function finalizar() {
     if (valores.length == 0) {
         alert('Você precisa adicionar valores antes de finalizar')
     } else {
-        res.innerHTML += `Ao todo temos ${total()} numeros cadastrados <br>`;
-        res.innerHTML += `O maior valor foi ${maior()}.<br>`;
-        res.innerHTML += `O menor valor foi ${menor()}.<br>`;
-        res.innerHTML += `Somando todos os valores é igual a ${soma()}<br>`;
-        res.innerHTML += `A media dos valores é ${media().toFixed(2)}`;
+        res.innerHTML += `<p></p>Ao todo temos ${total()} numeros cadastrados.</p> <br>`;
+        res.innerHTML += `<p>O maior valor foi ${maior()}.</p> <br>`;
+        res.innerHTML += `<p>O menor valor foi ${menor()}.</p> <br>`;
+        res.innerHTML += `<p>Somando todos os valores é igual a ${soma()}.</p> <br>`;
+        res.innerHTML += `<p>A media dos valores é ${media().toFixed(2)}</p>`;
     }
 }
 function total() {
